@@ -1,13 +1,12 @@
 #Lab3_2.py
 #Chasyl De Guzman
 
-#variables
-x = "Python"
+#variable
+x = input("Please enter a string: ")
 
 #print
-print(""+"Please enter a string: " + x + '\n' +
-         "Original Text: " + x + '\n' +
-         "First Letter: " + x[:1].lower() + '\n' +
-         "Last Letter: " + x[5:6] + '\n' +
+print("Original Text: " + x[:] + '\n' +
+         "First Letter: " + x[0] + '\n' +
+         "Last Letter: " + x[-1:] + '\n' +
          "Reversed Text: " + x[::-1]
 )

@@ -1,12 +1,11 @@
 #Lab3_1.py
 #Chasyl De Guzman
 
-#variables
-bill = float(67.98)
-percentTip = 18
-tip = float(bill%percentTip)
+
+#variable
+bill = float(input("Enter the amount of bill: "))
+tipPercent = int(input("Enter the percentage of the tip: "))
+tip = float((bill*tipPercent)/100)
 
 #print
-print( "","Enter the amount of bill: ",bill,'\n',
-       "Enter the percentage of the tip: ",percentTip,'\n',
-       "Tip:", round(tip,2))
+print("Tip: $",round(tip, 2))

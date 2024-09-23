@@ -1,16 +1,21 @@
 #Lab3_3.py
 #Chasyl De Guzman
 
-#variables
-x = (7,0,4)
+#variable
+a = int(input("Please enter the first integer: "))
+b = int(input("Please enter the second integer: "))
+c = int(input("Please enter the third integer: "))
+x = [a,b,c]
+
+#using max(),min(), and remove to remove the max and min for // 
+#variable mid to only print the center interger
+
+Min = min(x)
+x.remove(min(x))
+Max = max(x)
+x.remove(max(x))
+Mid = x[0]
 
 #print
-print("","Please enter the first interger: ",max(x), "\n",
-      "Please enter the second interger: ",min(x), "\n",
-      "Please enter the third interger: ","\n",
-      "Before sorting: ","\n",
-      "Please enter the second interger: "
-
-
-
-)
+print("Before sorting:", a,b,c)
+print("After sorting:", Min, Mid, Max)
