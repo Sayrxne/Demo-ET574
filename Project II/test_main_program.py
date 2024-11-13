@@ -28,8 +28,15 @@ class TestMainFunction(unittest.TestCase):
            mock_print.mock_calls
        )
         
+    @patch('builtins.input', side_effect=['3', '-5', '110', '85', '90', '78'])  # Simulate invalid and valid inputs for grades
+    @patch('builtins.print')  # Mock the print function to capture output
+    def test_invalid_grades(self, mock_print, mock_input):
+        # Simulate the main function behavior 
+        main_program.main()
+        mock_print.assert_called_with("The average grade for 3 students is: 84.33")
+        self.assertIn(
+           unittest.mock.call("The average grade for 3 students is: 84.33"),
+           mock_print.mock_calls)
         
-
-
 if __name__ == "__main__":
-    unittest.main()       
+    unittest.main()
